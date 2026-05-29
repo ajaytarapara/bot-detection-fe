@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+body {
+  background-color: #020617; /* bg-slate-950 */
+  color: #f8fafc; /* text-slate-100 */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Scrollbar Styles for Live Event Stream */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 9999px;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.4);
+}
+
+/* Keyframes for Smooth Fade-In and Pulse Glow Effects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+#root {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  border-inline: none !important;
+  min-height: 100vh !important;
+}
